@@ -1,0 +1,199 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+    margin-top: 2%; /*Not sustainable {FIX}*/
+}
+
+/* Button to generate dishes */
+#generator {
+    background-color: #000;
+    padding: 5px 10px;
+    margin: 2%;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #00ff00;
+}
+
+#print {
+  background-color: #000;
+  padding: 5px 10px;
+  margin: 2%;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #00ff00;
+}
+
+.weekText1, .weekText2, .weekText3, .weekText4{
+  text-align: center;
+  padding-top: 10px;
+}
+
+/**********************************
+__  __       _          _____      _     _ 
+|  \/  |     (_)        / ____|    (_)   | |
+| \  / | __ _ _ _ __   | |  __ _ __ _  __| |
+| |\/| |/ _` | | '_ \  | | |_ | '__| |/ _` |
+| |  | | (_| | | | | | | |__| | |  | | (_| |
+|_|  |_|\__,_|_|_| |_|  \_____|_|  |_|\__,_|
+************************************/                                            
+.weekText1{
+  grid-area: weekText1;
+}
+
+.weekText2{
+  grid-area: weekText2;
+}
+
+.weekText3{
+  grid-area: weekText3;
+}
+
+.weekText4{
+  grid-area: weekText4;
+}
+
+.mon{
+  grid-area: mon;
+}
+
+.tue{
+  grid-area: tue;
+}
+
+.wed{
+  grid-area: wed;
+}
+
+.thu{
+  grid-area: thu;
+}
+
+.fri{
+  grid-area: fri;
+}
+
+.sat{
+  grid-area: sat;
+}
+
+.sun{
+  grid-area: sun;
+}
+
+
+main{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 80px 150px 150px 150px 150px;
+  grid-template-rows: auto;
+  column-gap: 10px;
+  row-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  grid-template-areas: 
+    ". weekText1 weekText2 weekText3 weekText4"
+    "mon dishes dishes dishes dishes"
+    "tue dishes dishes dishes dishes"
+    "wed dishes dishes dishes dishes"
+    "thu dishes dishes dishes dishes"
+    "fri dishes dishes dishes dishes"
+    "sat dishes dishes dishes dishes"
+    "sun dishes dishes dishes dishes"
+    ;
+}
+
+
+.dishes{
+    grid-area: dishes;
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px;
+    grid-template-rows: auto;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+/* individual dish */
+.infoCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    box-shadow: 0px 0px 5px black;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.infoCard p{
+    padding: 2px 5px;
+    color: black;
+    font-weight: bold;
+}
+
+/* background-color for individual dishes */
+.dishes > div:nth-child(1),
+.dishes > div:nth-child(2),
+.dishes > div:nth-child(3),
+.dishes > div:nth-child(4){
+    background-color: #eb4255;
+}
+
+.dishes > div:nth-child(5),
+.dishes > div:nth-child(6),
+.dishes > div:nth-child(7),
+.dishes > div:nth-child(8){
+    background-color: #f19a38;
+}
+
+.dishes > div:nth-child(9),
+.dishes > div:nth-child(10),
+.dishes > div:nth-child(11),
+.dishes > div:nth-child(12){
+    background-color: #dab43c;
+}
+
+.dishes > div:nth-child(13),
+.dishes > div:nth-child(14),
+.dishes > div:nth-child(15),
+.dishes > div:nth-child(16){
+    background-color: #6ac55b;
+}
+
+.dishes > div:nth-child(17),
+.dishes > div:nth-child(18),
+.dishes > div:nth-child(19),
+.dishes > div:nth-child(20){
+    background-color: #69b6d9;
+}
+
+.dishes > div:nth-child(21),
+.dishes > div:nth-child(22),
+.dishes > div:nth-child(23),
+.dishes > div:nth-child(24){
+    background-color: #2d78e8;
+}
+
+.dishes > div:nth-child(25),
+.dishes > div:nth-child(26),
+.dishes > div:nth-child(27),
+.dishes > div:nth-child(28){
+    background-color: #7256c9;
+}
+
+
+
+
+

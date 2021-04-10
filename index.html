@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="print.css" media="print">
+    <title>Madplan-test</title>
+</head>
+<body>
+
+    <a id="generator">Generate</a>
+    <a id="print">Print</a>
+    <main id="printable">
+        <p class='weekText1'>Uge 1</p>
+        <p class='weekText2'>Uge 2</p>
+        <p class='weekText3'>Uge 3</p>
+        <p class='weekText4'>Uge 4</p>
+        <p class='mon'>Mandag</p>
+        <p class='tue'>Tirsdag</p>
+        <p class='wed'>Onsdag</p>
+        <p class='thu'>Torsdag</p>
+        <p class='fri'>Fredag</p>
+        <p class='sat'>Lørdag</p>
+        <p class='sun'>Søndag</p>
+        <section class="dishes">
+                <!-- Monday -->
+                <div class="infoCard">
+                    <p class="monday"></p>
+                </div>
+                <div class="infoCard">
+                    <p class="monday2"></p>
+                </div>
+                <div class="infoCard">
+                    <p class="monday3"></p>
+                </div>
+                <div class="infoCard">
+                    <p class="monday4"></p>
+                </div>
+                
+                <!-- Tuesday -->
+                <div class="infoCard">
+                    <p class="tuesday"></p>
+                </div>
+                <div class="infoCard">
+                    <p class="tuesday2"></p>
+                </div>
+                <div class="infoCard">
+                    <p class="tuesday3"></p>
+                </div>
+                <div class="infoCard">
+                    <p class="tuesday4"></p>
+                </div>
+
+                <!-- Wednesday -->
+                <div class="infoCard">
+                    <p class="wednesday"></p>
+                </div>
+                <div class="infoCard">
+                    <p class="wednesday2"></p>
+                </div>
+                <div class="infoCard">
+                    <p class="wednesday3"></p>
+                </div>
+                <div class="infoCard">
+                    <p class="wednesday4"></p>
+                </div>
+
+
+                <!-- Thursday -->
+                <div class="infoCard">
+                    <p class="thursday"></p>
+                </div>
+                <div class="infoCard">
+                    <p class="thursday2"></p>
+                </div>
+                <div class="infoCard">
+                    <p class="thursday3"></p>
+                </div>
+                <div class="infoCard">
+                    <p class="thursday4"></p>
+                </div>
+
+
+                <!-- Friday -->
+                <div class="infoCard">
+                    <p>Rester + Rugbrød</p>
+                </div>
+                <div class="infoCard">
+                    <p>Rester + Rugbrød</p>
+                </div>
+                <div class="infoCard">
+                    <p>Rester + Rugbrød</p>
+                </div>
+                <div class="infoCard">
+                    <p>Rester + Rugbrød</p>
+                </div>
+
+
+                <!-- Saturday -->
+                <div class="infoCard">
+                    <p>CHEAT</p>
+                </div>
+                <div class="infoCard">
+                    <p>CHEAT</p>
+                </div>
+                <div class="infoCard">
+                    <p>CHEAT</p>
+                </div>
+                </div>
+                <div class="infoCard">
+                    <p>CHEAT</p>
+                </div>
+
+
+                <!-- Sunday -->
+                <div class="infoCard">
+                    <p>Rester + Rugbrød</p>
+                </div>
+                <div class="infoCard">
+                    <p>Rester + Rugbrød</p>
+                </div>
+                <div class="infoCard">
+                    <p>Rester + Rugbrød</p>
+                </div>
+                <div class="infoCard">
+                    <p>Rester + Rugbrød</p>
+                </div>
+
+        </section>
+    </main>
+    <a id="saveAsPdfBtn" href="https://www.sejda.com/html-to-pdf">Save as PDF</a>
+    <script>
+        document.getElementById('saveAsPdfBtn').addEventListener('click', function(e){
+        var pageUrl = encodeURIComponent(window.location.href);
+        window.open('https://www.sejda.com/html-to-pdf?save-link=' + pageUrl);
+        e.preventDefault();
+        });
+    </script>
+    <script src="html2canvas.min.js"></script>
+    <script src='app.js'></script>
+    
+</body>
+</html>
