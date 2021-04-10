@@ -100,7 +100,6 @@ main{
   row-gap: 20px;
   justify-content: center;
   align-items: center;
-  text-transform: uppercase;
   grid-template-areas: 
     ". weekText1 weekText2 weekText3 weekText4"
     "mon dishes dishes dishes dishes"
@@ -128,23 +127,16 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
     width: var(--grid-column);
     height: 100px;
     text-align: center;
-    box-shadow: 0px 0px 5px black;
-    font-size: 12px;
+    font-size: 14px;
     padding: 10px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
 }
 
 .infoCard p{
     padding: 2px 5px;
-    color: black;
+    color: #fff;
     font-weight: bold;
 }
 

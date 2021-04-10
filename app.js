@@ -64,27 +64,27 @@ function displayDishes() {
 
     } while (i <= 8) {
 
-            monday.innerHTML      = weeks[0]
-            tuesday.innerHTML     = weeks[0]
-            wednesday.innerHTML   = weeks[1]
-            thursday.innerHTML    = weeks[1]
+            monday.innerHTML      = weeks[0].split("+").join("<br> +")
+            tuesday.innerHTML     = weeks[0].split("+").join("<br> +")
+            wednesday.innerHTML   = weeks[1].split("+").join("<br> +")
+            thursday.innerHTML    = weeks[1].split("+").join("<br> +")
 
-            monday2.innerHTML     = weeks[2]
-            tuesday2.innerHTML    = weeks[2]
-            wednesday2.innerHTML  = weeks[3]
-            thursday2.innerHTML   = weeks[3]
+            monday2.innerHTML     = weeks[2].split("+").join("<br> +")
+            tuesday2.innerHTML    = weeks[2].split("+").join("<br> +")
+            wednesday2.innerHTML  = weeks[3].split("+").join("<br> +")
+            thursday2.innerHTML   = weeks[3].split("+").join("<br> +")
 
-            monday3.innerHTML     = weeks[4]
-            tuesday3.innerHTML    = weeks[4]
-            wednesday3.innerHTML  = weeks[5]
-            thursday3.innerHTML   = weeks[5]
+            monday3.innerHTML     = weeks[4].split("+").join("<br> +")
+            tuesday3.innerHTML    = weeks[4].split("+").join("<br> +")
+            wednesday3.innerHTML  = weeks[5].split("+").join("<br> +")
+            thursday3.innerHTML   = weeks[5].split("+").join("<br> +")
 
-            monday4.innerHTML     = weeks[6]
-            tuesday4.innerHTML    = weeks[6]
-            wednesday4.innerHTML  = weeks[7]
-            thursday4.innerHTML   = weeks[7]
+            monday4.innerHTML     = weeks[6].split("+").join("<br> +")
+            tuesday4.innerHTML    = weeks[6].split("+").join("<br> +")
+            wednesday4.innerHTML  = weeks[7].split("+").join("<br> +")
+            thursday4.innerHTML   = weeks[7].split("+").join("<br> +")
 
-            console.log()
+            console.log(weeks[0].split("+").join("<br> +"))
     }
 
 
@@ -95,27 +95,6 @@ function generateDishes() {
 
     btn.addEventListener("click", displayDishes)
 
-}
-
-function printDishes() {
-    let btn = document.getElementById('print')
-    let css = new String("<link rel=\"stylesheet\" href=\"print.css\">");
-    let content = document.getElementById('printable')
-    let WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0')
-
-
-    WinPrint.document.write('<!DOCTYPE html><html><head><title>Madplan</title>')
-    WinPrint.document.write(css)
-    WinPrint.document.write('</head><body>')
-    WinPrint.document.write(content)
-    WinPrint.document.write('</body></html>')
-    WinPrint.document.close()
-    WinPrint.focus()
-    setTimeout(()=>{WinPrint.print()},1000)
-    WinPrint.close()
-    
-
-    console.log(btn)
 }
 
 
