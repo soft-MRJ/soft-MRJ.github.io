@@ -32,6 +32,17 @@ body{
   color: #fff;
 }
 
+#showWeek {
+  margin: 0;
+}
+
+#Weekinput {
+  font-size: 16px;
+  padding: 5px;
+  width: 130px;
+}
+
+
 /*****************************/
 /*******Input section*********/
 /*****************************/
