@@ -137,7 +137,37 @@ function saturdayDishes() {
 
 }
 
+function weekStart() {
+    let btn = document.getElementById('showWeek');
+    let input = document.getElementById('Weekinput');
+
+    let week1 = document.querySelector(".weekText1")
+
+    let u1 = document.getElementById("u1")
+    let u2 = document.getElementById("u2")
+    let u3 = document.getElementById("u3")
+    let u4 = document.getElementById("u4")
+
+    let intInput = parseInt(input.value, 10)
+
+    btn.addEventListener("click",() => {
+        if (input.value === "") {
+            input.style.border = "2px solid red";
+        } else {
+            console.log(parseInt(input.value, 10) + 1)
+            u1.innerHTML = input.value;
+            u2.innerHTML = parseInt(input.value, 10) +1
+            u3.innerHTML = parseInt(input.value, 10) +2
+            u4.innerHTML = parseInt(input.value, 10) +3
+
+        }
+    })
+
+}
+
+
 
 generateDishes()
 displayDishes()
 saturdayDishes()
+weekStart()
