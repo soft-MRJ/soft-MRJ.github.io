@@ -47,13 +47,13 @@ body{
   display: block;
   width: 100%;
   margin: 5px 0;
-  padding: 2px;
+  padding: 5px;
   font-size: 18px;
 }
 
 #saturdays a {
   position: absolute;
-  top: 140px;
+  top: 160px;
   left: -8px;
 }
 
