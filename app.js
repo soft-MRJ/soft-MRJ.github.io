@@ -28,6 +28,8 @@ function displayDishes() {
         "Chicken noodle soup"
     ]
 
+
+    // random week dish generator
     monday   = document.querySelector(".monday");
     tuesday  = document.querySelector(".tuesday");
     wednesday   = document.querySelector(".wednesday");
@@ -98,9 +100,44 @@ function generateDishes() {
 }
 
 function saturdayDishes() {
+    let btn = document.getElementById('saturdayBtn')
+    let input1 = document.getElementById('sat1');
+    let input2 = document.getElementById('sat2');
+    let input3 = document.getElementById('sat3');
+    let input4 = document.getElementById('sat4');
     
+    let sat1 = document.querySelector(".saturday1");    
+    let sat2 = document.querySelector(".saturday2");    
+    let sat3 = document.querySelector(".saturday3");    
+    let sat4 = document.querySelector(".saturday4");    
+
+    btn.addEventListener("click",() => {
+        if (input1.value === "") {
+            input1.style.border = "2px solid red"
+        } else {
+            sat1.innerHTML = input1.value
+        }
+        if (input2.value === "") {
+            input2.style.border = "2px solid red"
+        } else {
+            sat2.innerHTML = input2.value
+        }
+        if (input3.value === "") {
+            input3.style.border = "2px solid red"
+        } else {
+            sat3.innerHTML = input3.value
+        }
+        if (input4.value === "") {
+            input4.style.border = "2px solid red"
+        } else {
+            sat4.innerHTML = input4.value
+        } 
+
+    })
+
 }
 
 
 generateDishes()
 displayDishes()
+saturdayDishes()
