@@ -99,3 +99,4 @@ function generateDishes() {
 
 
 generateDishes()
+displayDishes()
