@@ -115,22 +115,22 @@ function saturdayDishes() {
         if (input1.value === "") {
             input1.style.border = "2px solid red"
         } else {
-            sat1.innerHTML = input1.value
+            sat1.innerHTML = input1.value.split("+").join("<br> +")
         }
         if (input2.value === "") {
             input2.style.border = "2px solid red"
         } else {
-            sat2.innerHTML = input2.value
+            sat2.innerHTML = input2.value.split("+").join("<br> +")
         }
         if (input3.value === "") {
             input3.style.border = "2px solid red"
         } else {
-            sat3.innerHTML = input3.value
+            sat3.innerHTML = input3.value.split("+").join("<br> +")
         }
         if (input4.value === "") {
             input4.style.border = "2px solid red"
         } else {
-            sat4.innerHTML = input4.value
+            sat4.innerHTML = input4.value.split("+").join("<br> +")
         } 
 
     })
@@ -141,14 +141,10 @@ function weekStart() {
     let btn = document.getElementById('showWeek');
     let input = document.getElementById('Weekinput');
 
-    let week1 = document.querySelector(".weekText1")
-
     let u1 = document.getElementById("u1")
     let u2 = document.getElementById("u2")
     let u3 = document.getElementById("u3")
     let u4 = document.getElementById("u4")
-
-    let intInput = parseInt(input.value, 10)
 
     btn.addEventListener("click",() => {
         if (input.value === "") {
