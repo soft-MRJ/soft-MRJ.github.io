@@ -97,6 +97,10 @@ function generateDishes() {
 
 }
 
+function saturdayDishes() {
+    
+}
+
 
 generateDishes()
 displayDishes()

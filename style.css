@@ -12,26 +12,51 @@
 body{
     font-family: 'Roboto', 'Helvetica', sans-serif;
     margin-top: 2%; /*Not sustainable {FIX}*/
+    position: relative;
 }
 
-/* Button to generate dishes */
-#generator {
-    background-color: #000;
+/* All buttons */
+.btn {
+    border: 2px solid #2c2c2c;
     padding: 5px 10px;
     margin: 2%;
     cursor: pointer;
     border-radius: 5px;
-    color: #00ff00;
+    color: #000000;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
 }
 
-#print {
-  background-color: #000;
-  padding: 5px 10px;
-  margin: 2%;
-  cursor: pointer;
-  border-radius: 5px;
-  color: #00ff00;
+.btn:hover {
+  background-color: #2c2c2c;
+  color: #fff;
 }
+
+/*****************************/
+/*******Input section*********/
+/*****************************/
+#saturdays {
+  width: 20%;
+  height: 250px;
+  position: absolute;
+  top: 50px;
+  left: 37.5px;
+}
+
+#saturdays input {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  padding: 2px;
+  font-size: 18px;
+}
+
+#saturdays a {
+  position: absolute;
+  top: 140px;
+  left: -8px;
+}
+
 
 .weekText1, .weekText2, .weekText3, .weekText4{
   text-align: center;
