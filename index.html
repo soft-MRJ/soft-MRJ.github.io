@@ -34,59 +34,59 @@
         <p class='sun'>Søndag</p>
         <section class="dishes">
                 <!-- Monday -->
-                <div class="infoCard">
+                <div class="infoCard" data-modal-target="#modal">
                     <p class="monday"></p>
                 </div>
-                <div class="infoCard">
+                <div class="infoCard" data-modal-target="#modal">
                     <p class="monday2"></p>
                 </div>
-                <div class="infoCard">
+                <div class="infoCard" data-modal-target="#modal">
                     <p class="monday3"></p>
                 </div>
-                <div class="infoCard">
+                <div class="infoCard" data-modal-target="#modal">
                     <p class="monday4"></p>
                 </div>
                 
                 <!-- Tuesday -->
-                <div class="infoCard">
+                <div class="infoCard" data-modal-target="#modal">
                     <p class="tuesday"></p>
                 </div>
-                <div class="infoCard">
+                <div class="infoCard" data-modal-target="#modal">
                     <p class="tuesday2"></p>
                 </div>
-                <div class="infoCard">
+                <div class="infoCard" data-modal-target="#modal">
                     <p class="tuesday3"></p>
                 </div>
-                <div class="infoCard">
+                <div class="infoCard" data-modal-target="#modal">
                     <p class="tuesday4"></p>
                 </div>
 
                 <!-- Wednesday -->
-                <div class="infoCard">
+                <div class="infoCard" data-modal-target="#modal">
                     <p class="wednesday"></p>
                 </div>
-                <div class="infoCard">
+                <div class="infoCard" data-modal-target="#modal">
                     <p class="wednesday2"></p>
                 </div>
-                <div class="infoCard">
+                <div class="infoCard" data-modal-target="#modal">
                     <p class="wednesday3"></p>
                 </div>
-                <div class="infoCard">
+                <div class="infoCard" data-modal-target="#modal">
                     <p class="wednesday4"></p>
                 </div>
 
 
                 <!-- Thursday -->
-                <div class="infoCard">
+                <div class="infoCard" data-modal-target="#modal">
                     <p class="thursday"></p>
                 </div>
-                <div class="infoCard">
+                <div class="infoCard" data-modal-target="#modal">
                     <p class="thursday2"></p>
                 </div>
-                <div class="infoCard">
+                <div class="infoCard" data-modal-target="#modal">
                     <p class="thursday3"></p>
                 </div>
-                <div class="infoCard">
+                <div class="infoCard" data-modal-target="#modal">
                     <p class="thursday4"></p>
                 </div>
 
@@ -138,6 +138,20 @@
 
         </section>
     </main>
+
+    <section class="modal" id="modal">
+        <article class="modal-header">
+            <h1>Retter</h1>
+            <button class="close-btn" data-close-button>&times;</button>
+        </article>
+        <section class="modal-body">
+            
+        </section>
+    </section>
+    <div  id="overlay"></div>
+
+
+
     <script>
         document.getElementById('saveAsPdfBtn').addEventListener('click', function(e){
         var pageUrl = encodeURIComponent(window.location.href);

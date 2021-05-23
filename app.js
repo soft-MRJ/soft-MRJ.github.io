@@ -1,32 +1,75 @@
+const dishes = [
+    "Hakkebøffer + Kartofler + Salat",
+    "Æggekage",
+    "Mørbrad m. pikantsovs + Bulgursalat",
+    "Fiskefillet + Bønner + Rodfrugter",
+    "Hønsekødssuppe + Hvisløgsbrød",
+    "Kyllingenuggets + Sunde fritter + pastasalat",
+    "Fiskefrikadeller + Hasselbagte gulerødder + Salat",
+    "Sund lasange",
+    "Hasselbat kylling + Bønner + Bulgursalat",
+    "Kålpandekager",
+    "Tærte",
+    "Kødsovs + Kål",
+    "Kyllingefrikadeller + Bønner + Brokoli",
+    "Kyllingefrikadeller + Rodfrugter + Bulgursalat",
+    "Mexikanske pandekager",
+    "Pitabrød",
+    "Kartoffelporresuppe",
+    "Hakkebøffer + Rodfrugter + Sovs",
+    "Kyllingeburger + Bønner + Sunder fritter",
+    "Løgsuppe + Hvidløgsbrød",
+    "Kålfad",
+    "Biksemad",
+    "Kyllinge kødsovs + Fuldkornspasta",
+    "Sund tacogryde",
+    "Kyllingefilleter m. pikant + Rodfrugter + Bulgursalat",
+    "Chicken noodle soup"
+]
+
+
+/*MODAL*/
+// variables for buttons
+const openModalButtons = document.querySelectorAll("[data-modal-target]");
+const closeModalButtons = document.querySelectorAll("[data-close-button]");
+const overlay = document.getElementById("overlay");
+
+openModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = document.querySelector(button.CDATA_SECTION_NODE.modalTarget)
+        openModal(modal)
+    })
+})
+
+closeModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = button.closest('.modal')
+        closeModal(modal)
+    })
+})
+
+overlay.addEventListener('click', () => {
+    const modals = document.querySelectorAll('.modal.active')
+    modals.forEach(modal => {
+        closeModal(modal)
+    })
+})
+
+function openModal() {
+    if (modal == null) return
+    modal.classList.add('active')
+    overlay.classList.add('active')
+}
+
+function closeModal() {
+    if (modal == null) return
+    modal.classList.remove('active')
+    overlay.classList.remove('active')
+}
+
+
+
 function displayDishes() {
-    const dishes = [
-        "Hakkebøffer + Kartofler + Salat",
-        "Æggekage",
-        "Mørbrad m. pikantsovs + Bulgursalat",
-        "Fiskefillet + Bønner + Rodfrugter",
-        "Hønsekødssuppe + Hvisløgsbrød",
-        "Kyllingenuggets + Sunde fritter + pastasalat",
-        "Fiskefrikadeller + Hasselbagte gulerødder + Salat",
-        "Sund lasange",
-        "Hasselbat kylling + Bønner + Bulgursalat",
-        "Kålpandekagero",
-        "Tærte",
-        "Kødsovs + Kål",
-        "Kyllingefrikadeller + Bønner + Brokoli",
-        "Kyllingefrikadeller + Rodfrugter + Bulgursalat",
-        "Mexikanske pandekager",
-        "Pitabrød",
-        "Kartoffelporresuppe",
-        "Hakkebøffer + Rodfrugter + Sovs",
-        "Kyllingeburger + Bønner + Sunder fritter",
-        "Løgsuppe + Hvidløgsbrød",
-        "Kålfad",
-        "Biksemad",
-        "Kyllinge kødsovs + Fuldkornspasta",
-        "Sund tacogryde",
-        "Kyllingefilleter m. pikant + Rodfrugter + Bulgursalat",
-        "Chicken noodle soup"
-    ]
 
 
     // random week dish generator
@@ -88,6 +131,29 @@ function displayDishes() {
 
             console.log(weeks[0].split("+").join("<br> +"))
     }
+
+
+    // MODAL BODY
+    // import html element
+    // create html element div>p 
+    // add classes for styling
+    // display dishes
+    const overlayDishes = document.querySelector('.modal-body')
+    dishes.forEach(element => {
+        const newEl = document.createElement('div')
+        
+        newEl.innerHTML = `<p>${element}</p>`
+        newEl.classList.add('infoCard')
+        newEl.classList.add('overlayDishes')
+
+        overlayDishes.appendChild(newEl)
+
+        newEl.addEventListener('click', () => {
+            openModalButtons.innerHTML = newEl.innerHTML
+        })
+    });
+
+
 
 
 }
